@@ -1,0 +1,55 @@
+ &CONTROL
+   calculation     =  'vc-relax'
+   etot_conv_thr   =  0.0002
+   forc_conv_thr   =  0.0001
+   nstep           =  300
+   prefix          =  'c'
+   pseudo_dir      =  '/home/alexandro/q-e-qe-6.8/pseudo'
+   restart_mode    =  'from_scratch'
+   tprnfor         =  .true.
+   tstress         =  .true.
+   verbosity       =  'high'
+ /
+
+ &SYSTEM
+   A               =  2.47
+   C               =  6.68
+   degauss         =  0.014699
+   ecutrho         =  480.0
+   ecutwfc         =  120.0
+   ibrav           =  4
+   nat             =  4
+   ntyp            =  1
+   vdw_corr        =  'grimme-d3'
+ /
+
+ &ELECTRONS
+   conv_thr        =  4e-9
+   electron_maxstep =  100
+   mixing_beta     =  0.4
+ /
+
+ &IONS
+   ion_dynamics    =  'bfgs'
+ /
+
+ &CELL
+   cell_dofree     =  'all'
+   cell_dynamics   =  'bfgs'
+ /
+
+ATOMIC_SPECIES 
+  C    12.011   C.upf 
+
+
+ATOMIC_POSITIONS crystal
+  C        0.000000000000   0.000000000000   0.000000000000
+  C        0.333000000000   0.666000000000   0.000000000000
+  C        0.666000000000   0.333000000000   0.500000000000
+  C        1.000000000000   1.000000000000   0.500000000000
+
+K_POINTS automatic
+  8   8   8   0   0   0 
+
+
+
